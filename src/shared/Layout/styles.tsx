@@ -4,11 +4,12 @@ export const LayoutWrapper = styled.div`
   width: 100%;
   height: 100%;
   display: flex;
-  justify-content: center;
 `;
 
 export const ContentWrapper = styled.div`
   display: flex;
+  justify-content: center;
   width: 100%;
-  max-width: 1400px;
+  max-width: 1500px;
+  padding: 16px;
 `;

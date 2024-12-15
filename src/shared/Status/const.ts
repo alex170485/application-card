@@ -4,3 +4,10 @@ export const APPLICATION_STATUS_MAP = {
   completed: '#1C9A13',
   have_review: '#019EC1',
 } as const;
+
+export const APPLICATION_STATUS_TITLE_MAP = {
+  in_progress: 'Выполняется',
+  past_due: 'Просрочена',
+  completed: 'Выполнена',
+  have_review: 'Есть отзыв',
+} as const;

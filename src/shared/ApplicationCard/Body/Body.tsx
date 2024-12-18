@@ -1,25 +1,26 @@
 import { FC } from 'react';
 import { BodyWrapper, DescriptionBlock } from './styles.ts';
 import { Row } from '../Row/Row.tsx';
-import { ApplicationCardButton } from '../ApplicationCardButton/ApplicationCardButton.tsx';
+import { Divider } from '../styles.tsx';
 
 type BodyProps = {
   isOpen: boolean;
-  onClick: () => void;
-  customButtonLabel: string;
 };
 
-export const Body: FC<BodyProps> = ({ isOpen, onClick, customButtonLabel }) => {
+export const Body: FC<BodyProps> = ({ isOpen }) => {
   return (
     <BodyWrapper>
       <Row title='Создана' message={'efoiuher'} />
       <Row title='Контроль' message={'roiejh'} />
       <Row title='Система' message={'aeiubfh'} />
       <Row title='Объект' message={'aiuefh'} />
-      <DescriptionBlock>
-        regijoerijgorjigregoiherjioughruidhgiudhriughdsriughisdruhgiusdhrgiusdhriughsdriuhgisdruhigurhiguhdisughsiuhgisuhgiushdriughsdrighisdrhgidrh
+      <Divider />
+      <DescriptionBlock isActive={isOpen}>
+        После осуществления поиска, внизу под поисковыми полями отображаются результаты поиска в виде списка виде списка
+        После осуществления поиска, внизу под поисковыми полями отображаются результаты поиска в виде списка виде
+        спискаПосле осуществления поиска, внизу под поисковыми полями отображаются результаты поиска в виде списка виде
+        спискаПосле осуществления поиска, внизу под поисковыми полями
       </DescriptionBlock>
-      <ApplicationCardButton customLabel={customButtonLabel} onClick={onClick} isOpen={isOpen} />
     </BodyWrapper>
   );
 };

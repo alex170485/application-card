@@ -8,9 +8,9 @@ type RowPropsType = {
 
 export const Row: FC<RowPropsType> = ({ title, message }) => {
   return (
-    <Box display='flex' columnGap='32px'>
-      {title}
-      {message}
+    <Box width='100%' display='flex' columnGap='32px' justifyContent='space-between'>
+      <Box width='25%'>{title}</Box>
+      <Box width='75%'>{message}</Box>
     </Box>
   );
 };

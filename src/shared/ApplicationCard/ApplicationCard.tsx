@@ -2,6 +2,10 @@ import { Wrapper } from './styles.tsx';
 import { Header } from './Header/Header.tsx';
 import { Body } from './Body/Body.tsx';
 import { FC, useState } from 'react';
+import { APPLICATION_STATUS_TITLE_MAP } from '../Status/const.ts';
+import { ApplicationCardButton } from './ApplicationCardButton/ApplicationCardButton.tsx';
+import { useDateFormatter } from '../../helpers/useDateFormatter.ts';
+import { useDifferentCalendarDays } from '../../helpers/useDifferentCalendarDays.ts';
 
 type ApplicationCardProps = {
   application_number: string;
@@ -16,7 +20,7 @@ type ApplicationCardProps = {
     address: string;
   };
   application_message: string;
-  status: string;
+  status: keyof typeof APPLICATION_STATUS_TITLE_MAP;
   is_technical: boolean;
   attachment: string;
 };
@@ -39,11 +43,14 @@ export const ApplicationCard: FC<ApplicationCardProps> = ({
   const buttonHandler = () => {
     setIsOpen((prev) => !prev);
   };
+  useDateFormatter(creation_date);
+  useDifferentCalendarDays(creation_date, date_modified);
 
   return (
-    <Wrapper>
-      <Header status={status}/>
-      <Body customButtonLabel={buttonLabel} isOpen={isOpen} onClick={buttonHandler} />
+    <Wrapper isActive={isOpen}>
+      <Header status={status} applicationNumber={application_number} />
+      <Body isOpen={isOpen} />
+      <ApplicationCardButton customLabel={buttonLabel} onClick={buttonHandler} isOpen={isOpen} />
     </Wrapper>
   );
 };

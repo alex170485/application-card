@@ -5,15 +5,16 @@ import { APPLICATION_STATUS_TITLE_MAP } from '../../Status/const.ts';
 import { Title } from './styles.tsx';
 
 type HeaderPropsType = {
-  status: string;
+  status: keyof typeof APPLICATION_STATUS_TITLE_MAP;
+  applicationNumber: string;
 };
 
-export const Header: FC<HeaderPropsType> = ({ status }) => {
+export const Header: FC<HeaderPropsType> = ({ status, applicationNumber }) => {
   const title = APPLICATION_STATUS_TITLE_MAP[status];
 
   return (
     <Box display='flex' alignItems='center' columnGap='8px'>
-      <Status status={status}>2323232</Status>
+      <Status status={status}>{applicationNumber}</Status>
       <Title>{title}</Title>
     </Box>
   );

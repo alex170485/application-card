@@ -1,9 +1,9 @@
 import { ApplicationCard } from '../../shared/ApplicationCard/ApplicationCard.tsx';
 import { Wrapper } from './styles.tsx';
 import fakeResponse from '../../data.json';
+import { APPLICATION_STATUS_TITLE_MAP } from '../../shared/Status/const.ts';
 
 export const MainPage = () => {
-
   return (
     <Wrapper>
       {fakeResponse?.map((item) => {
@@ -33,8 +33,8 @@ export const MainPage = () => {
             application_data={application_data}
             application_coordinates={application_coordinates}
             application_message={application_message}
-            status={status}
-            is_technical={is_technical}
+            status={status as keyof typeof APPLICATION_STATUS_TITLE_MAP}
+            is_technical={!!is_technical}
             attachment={attachment}
           />
         );

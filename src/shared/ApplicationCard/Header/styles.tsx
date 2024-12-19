@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import {RobotoMediumFont} from "../../../styles/typography.ts";
+import { RobotoMediumFont } from '../../../styles/typography.ts';
 
 export const Title = styled.p`
   ${RobotoMediumFont};
-    color: #222222
+  color: #222222;
 `;

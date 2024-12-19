@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import {RobotoRegularFont} from "../../../styles/typography.ts";
+import { RobotoRegularFont } from '../../../styles/typography.ts';
 
 export const BodyWrapper = styled.div`
   width: 100%;
@@ -11,21 +11,22 @@ export const BodyWrapper = styled.div`
 `;
 
 export const DescriptionWrapper = styled.div`
-    color: #444444
-`
+  color: #444444;
+`;
 
-export const DescriptionBlock = styled.div<{ isActive: boolean }>`
+export const DescriptionBlock = styled.div<{ isActive: boolean; hasButton: boolean }>`
   display: flex;
   word-break: break-all;
   overflow: hidden;
   text-overflow: ellipsis;
-  height: ${({ isActive }) => (isActive ? 'auto' : '90px')};
+  height: ${({ hasButton, isActive }) => (hasButton && !isActive ? '50px' : `auto`)};
   font-size: 14px;
-    ${RobotoRegularFont};
-    font-weight: 400;
-    
-    ${({ isActive }) =>
+  ${RobotoRegularFont};
+  font-weight: 400;
+
+  ${({ isActive, hasButton }) =>
     !isActive &&
+    hasButton &&
     `
     &::before {
         content:'';

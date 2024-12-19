@@ -14,7 +14,6 @@ export const MainPage = () => {
           control_date,
           date_modified,
           system,
-          application_data,
           application_coordinates,
           application_message,
           status,
@@ -30,11 +29,10 @@ export const MainPage = () => {
             control_date={control_date}
             date_modified={date_modified}
             system={system}
-            application_data={application_data}
             application_coordinates={application_coordinates}
             application_message={application_message}
             status={status as keyof typeof APPLICATION_STATUS_TITLE_MAP}
-            is_technical={!!is_technical}
+            is_technical={is_technical}
             attachment={attachment}
           />
         );

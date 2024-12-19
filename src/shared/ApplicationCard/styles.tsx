@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import {RobotoMediumFont} from "../../styles/typography.ts";
+import { RobotoMediumFont } from '../../styles/typography.ts';
 
 export const Wrapper = styled.div<{ isActive: boolean }>`
-  display: flex;
+    display: flex;
     flex-direction: column;
     background-color: #FFF;
     border-radius: 16px;
@@ -12,10 +12,9 @@ export const Wrapper = styled.div<{ isActive: boolean }>`
     position: relative;
     overflow: hidden;
 
-@media(max-width: 768px) {
+    @media(max-width: 768px) {
     width: 100%
-},
-    
+    },
 `;
 
 export const Divider = styled.div`
@@ -24,15 +23,22 @@ export const Divider = styled.div`
 `;
 
 export const TitleBlock = styled.div`
-  width: 25%;
-    color: #444444;
-    ${RobotoMediumFont};
-    font-size: 14px;
-`
+  width: 100%;
+  max-width: 20%;
+  color: #444444;
+  ${RobotoMediumFont};
+  font-size: 14px;
+`;
 
 export const InfoBlock = styled.div`
-    width: 75%;
-    color: #222222;
-    ${RobotoMediumFont};
-    font-size: 14px;
+  width: 80%;
+  color: #222222;
+  ${RobotoMediumFont};
+  font-size: 14px;
+`;
+
+export const GearIconWrapper = styled.div`
+  position: absolute;
+  right: 2px;
+  top: 4px;  
 `

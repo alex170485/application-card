@@ -1,6 +1,6 @@
 import { FC } from 'react';
 import { Box } from '../../Box/Box.tsx';
-import {InfoBlock, TitleBlock} from "../styles.tsx";
+import { InfoBlock, TitleBlock } from '../styles.tsx';
 
 type RowPropsType = {
   title: string;

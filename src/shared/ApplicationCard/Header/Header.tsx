@@ -14,7 +14,7 @@ export const Header: FC<HeaderPropsType> = ({ status, applicationNumber }) => {
 
   return (
     <Box display='flex' alignItems='center' columnGap='8px'>
-      <Status status={status}>{applicationNumber}</Status>
+      <Status status={status}>{`№ ${applicationNumber}`}</Status>
       <Title>{title}</Title>
     </Box>
   );

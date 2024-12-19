@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import { Box } from '../../Box/Box.tsx';
+import {InfoBlock, TitleBlock} from "../styles.tsx";
 
 type RowPropsType = {
   title: string;
@@ -8,9 +9,9 @@ type RowPropsType = {
 
 export const Row: FC<RowPropsType> = ({ title, message }) => {
   return (
-    <Box width='100%' display='flex' columnGap='32px' justifyContent='space-between'>
-      <Box width='25%'>{title}</Box>
-      <Box width='75%'>{message}</Box>
+    <Box width='100%' display='flex' columnGap='32px' justifyContent='space-between' zIndex={1}>
+      <TitleBlock>{`${title}:`}</TitleBlock>
+      <InfoBlock>{message}</InfoBlock>
     </Box>
   );
 };

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {RobotoMediumFont} from "../../styles/typography.ts";
 
 export const Wrapper = styled.div<{ status: any }>`
   width: 103px;
@@ -11,4 +12,5 @@ export const Wrapper = styled.div<{ status: any }>`
   font-weight: 500;
   overflow: hidden;
   text-overflow: ellipsis;
+    ${RobotoMediumFont}
 `;

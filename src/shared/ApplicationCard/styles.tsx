@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {RobotoMediumFont} from "../../styles/typography.ts";
 
 export const Wrapper = styled.div<{ isActive: boolean }>`
   display: flex;
@@ -21,3 +22,17 @@ export const Divider = styled.div`
   width: 100%;
   border-top: 1px solid #dbdbdb;
 `;
+
+export const TitleBlock = styled.div`
+  width: 25%;
+    color: #444444;
+    ${RobotoMediumFont};
+    font-size: 14px;
+`
+
+export const InfoBlock = styled.div`
+    width: 75%;
+    color: #222222;
+    ${RobotoMediumFont};
+    font-size: 14px;
+`

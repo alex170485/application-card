@@ -20,3 +20,17 @@ p {
   margin: 0;
   padding: 0;
 }
+
+@font-face {
+  font-family: Roboto-Regular;
+  src:
+    local('Roboto-Regular'),
+    url('./fonts/Roboto-Regular.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: Roboto-Medium;
+  src:
+    local('Roboto-Medium'),
+    url('./fonts/Roboto-Medium.ttf') format('truetype');
+}

@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import {RobotoRegularFont} from "../../../styles/typography.ts";
 
 export const BodyWrapper = styled.div`
   width: 100%;
@@ -9,6 +10,10 @@ export const BodyWrapper = styled.div`
   position: relative;
 `;
 
+export const DescriptionWrapper = styled.div`
+    color: #444444
+`
+
 export const DescriptionBlock = styled.div<{ isActive: boolean }>`
   display: flex;
   word-break: break-all;
@@ -16,18 +21,20 @@ export const DescriptionBlock = styled.div<{ isActive: boolean }>`
   text-overflow: ellipsis;
   height: ${({ isActive }) => (isActive ? 'auto' : '90px')};
   font-size: 14px;
-
-  ${({ isActive }) =>
+    ${RobotoRegularFont};
+    font-weight: 400;
+    
+    ${({ isActive }) =>
     !isActive &&
     `
     &::before {
         content:'';
         width:100%;
-        height:100%;
+        height:100px;
         position:absolute;
         left:0;
-        top:0;
-        background:linear-gradient(transparent 10px, white);
+        bottom:0;
+          background: linear-gradient(to bottom, transparent, white);
         }
     `}
 `;

@@ -1,5 +1,5 @@
-import {Box} from "../../shared/Box/Box.tsx";
-import errorImagePath from './images/404.jpg'
+import { Box } from '../../shared/Box/Box.tsx';
+import errorImagePath from './images/404.jpg';
 
 export const ErrorPage = () => {
   return (

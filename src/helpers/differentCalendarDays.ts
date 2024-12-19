@@ -6,17 +6,16 @@ export const differentCalendarDays = (startDate: string, endDate: string) => {
   const differentCalendarDays = differenceInCalendarDays(parseISO(startDate), parseISO(endDate));
 
   if (differentCalendarDays === 1) {
-    return `(${differentCalendarDays} день)`
+    return `(${differentCalendarDays} день)`;
   }
 
   if (differentCalendarDays > 2 && differentCalendarDays < 5) {
-    return `(${differentCalendarDays} дня)`
+    return `(${differentCalendarDays} дня)`;
   }
 
-  if(differentCalendarDays > 4) {
-    return `(${differentCalendarDays} дней)`
+  if (differentCalendarDays > 4) {
+    return `(${differentCalendarDays} дней)`;
   }
 
-  return ''
-
+  return '';
 };

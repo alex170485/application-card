@@ -1,4 +1,4 @@
-import {GearIconWrapper, Wrapper} from './styles.tsx';
+import { GearIconWrapper, Wrapper } from './styles.tsx';
 import { Header } from './Header/Header.tsx';
 import { Body } from './Body/Body.tsx';
 import { FC, useEffect, useRef, useState } from 'react';
@@ -7,8 +7,8 @@ import { ApplicationCardButton } from './ApplicationCardButton/ApplicationCardBu
 import { formatNumber } from '../../helpers/formatNumber.ts';
 import { dateFormatter } from '../../helpers/dateFormatter.ts';
 import { timeFormatter } from '../../helpers/timeFormatter.ts';
-import {differentCalendarDays} from "../../helpers/differentCalendarDays.ts";
-import GearIcon from '../../assets/GearIcon.svg'
+import { differentCalendarDays } from '../../helpers/differentCalendarDays.ts';
+import GearIcon from '../../assets/GearIcon.svg';
 
 type ApplicationCardProps = {
   application_number: string;
@@ -73,12 +73,16 @@ export const ApplicationCard: FC<ApplicationCardProps> = ({
   const isHaveReview = status === 'have_review';
   const duration = differentCalendarDays(date_modified, creation_date);
 
-  const pattern = new RegExp("true");
-  const isTechnical = pattern.test(is_technical)
+  const pattern = new RegExp('true');
+  const isTechnical = pattern.test(is_technical);
 
   return (
     <Wrapper isActive={isOpen}>
-      {isTechnical && <GearIconWrapper><GearIcon/></GearIconWrapper>}
+      {isTechnical && (
+        <GearIconWrapper>
+          <GearIcon />
+        </GearIconWrapper>
+      )}
       <Header status={status} applicationNumber={applicationNumber} />
       <Body
         ref={ref}

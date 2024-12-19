@@ -40,5 +40,5 @@ export const InfoBlock = styled.div`
 export const GearIconWrapper = styled.div`
   position: absolute;
   right: 2px;
-  top: 4px;  
-`
+  top: 4px;
+`;

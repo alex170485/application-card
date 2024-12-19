@@ -13,7 +13,7 @@ type BodyProps = {
   system: string;
   address: string;
   hasShowModifiedDate: boolean;
-  duration: string | null
+  duration: string | null;
 };
 
 export const Body = forwardRef((props: BodyProps, ref: Ref<HTMLDivElement>) => {
@@ -27,12 +27,12 @@ export const Body = forwardRef((props: BodyProps, ref: Ref<HTMLDivElement>) => {
     system,
     address,
     hasShowModifiedDate,
-    duration
+    duration,
   } = props;
 
   return (
     <BodyWrapper>
-      <Row title='Создана' message={hasShowModifiedDate ? `${createdDate} ${duration}` : createdDate } />
+      <Row title='Создана' message={hasShowModifiedDate ? `${createdDate} ${duration}` : createdDate} />
       <Row
         title={hasShowModifiedDate ? 'Выполнена' : 'Контроль'}
         message={hasShowModifiedDate ? controlDate : modifiedDate}
